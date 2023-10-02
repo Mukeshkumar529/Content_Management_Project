@@ -1,0 +1,107 @@
+body{
+    background-color: black;
+}
+
+#LoginMain{
+    width: 40rem;
+    height: 30rem;
+    margin-left: 25rem;
+    margin-top: 8rem;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 12px;
+    background-color: rgb(3, 66, 45);
+}
+.title h1{
+    background-color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.detail{
+    width: 38rem;
+    height: 22rem;
+    margin-left: 1rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    background-color: rgb(7, 7, 8);
+}
+
+input{
+    margin: 1rem;
+    width: 30rem;
+    height: 2rem;
+    float: left 0.7rem;
+    border-radius: 4px;
+}
+
+.btn-login{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 4px;
+    float: left 1rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: rgb(34, 136, 11);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+
+.btn-login:hover{
+    background-color: coral;
+}
+
+.btn-signUp{
+    height: 2rem;
+    background-color: rgb(185, 126, 9);
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    float: inline-end;
+    margin-top: 3rem;
+}
+.btn-signUp a{
+    text-decoration: none;
+}
+.btn-signUp:hover{
+    background-color: green;
+}
+
+.another-login-options h1{
+    font-size: medium;
+}
+
+.login-icon{
+    margin-top: 1rem;
+    margin-left: 14rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.login-icon li{
+    margin: 0.7rem;
+    list-style: none;
+    text-decoration: none;
+    float: left;
+      
+}
+ 
+.bi-person-bounding-box{
+    color: chartreuse;
+}
+
+.bi-file-lock-fill{
+    color: chartreuse;
+}
+.login-icon li a{
+    text-decoration: none;
+    color: azure;
+}
+
+
+/* .login-icon li a:hover{
+    background:linear-gradient(45deg, #0077b5, #000000, #313335, #86888a, #caccce, #00a0dc);
+} */
+
+ 
+

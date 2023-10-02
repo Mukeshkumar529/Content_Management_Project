@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blogs</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./cb.css">
+    
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <section id="navigation">
+        <div class="logo">
+            <a href="">Bharat Intern Mukesh</a>
+        </div>
+        <div class="nav_contents">
+            <ul>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="./about.html"><li>About Us</li></a>
+                <a href="./blogs.html"><li>Blogs</li></a> 
+                <a href="./create_blogs.html"><li>Create Blog</li></a>
+                 <a href="./login.html"><li>Login</li></a>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="create_b_main">
+
+        <div class="blog_c_items">
+            <h1>Create a new Blogs and Post</h1>
+            <div class="main_blog_input">
+                <div class="Text_Input">
+
+                    <fieldset>
+                        <legend>Post Title</legend>
+                        <input type="text" placeholder="Write your post Title">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Post Description</legend>
+                        <input type="text" placeholder="Write your post Description">
+                    </fieldset>
+
+
+                </div>
+                <div class="Media_File_input">
+                    <div class="image_container">
+                        <input type="file" id="upload-button" accept="image/*" />
+                        <label for="upload-button"
+                          ><i class="fa-solid fa-upload"></i>&nbsp; Upload Images or Drag here
+                        </label>
+                        <div id="error"></div>
+                        <div id="image-display"></div>
+                      </div>
+                </div>
+                <div class="Video_Input">
+                    <div class="video_file">
+                      <label for="video_input_file"><i class="bi bi-file-play"></i>Choose Video File</label>
+                      <input type="file" accept="video/mp4,video/x-m4v,video/*" id="video_input_file"> 
+                      <div class="video_display">
+                      <video src="" id="video_img_ph" controls></video>
+                       </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+
+            <div class="btn_post">
+                <button type="reset" class="reset">Reset Blog</button>
+                <button type="submit" class="post_b">Post Blog</button>
+            </div>
+        </div>
+
+    </section>
+
+ <script>
+
+let uploadButton = document.getElementById("upload-button");
+let chosenImage = document.getElementById("chosen-image");
+let fileName = document.getElementById("file-name");
+let image_container = document.querySelector(".image_container");
+let error = document.getElementById("error");
+let imageDisplay = document.getElementById("image-display");
+
+const fileHandler = (file, name, type) => {
+  if (type.split("/")[0] !== "image") {
+    //File Type Error
+    error.innerText = "Please upload an image file";
+    return false;
+  }
+  error.innerText = "";
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onloadend = () => {
+    //image and file name
+    let imageimage_container = document.createElement("figure");
+    let img = document.createElement("img");
+    img.src = reader.result;
+    imageimage_container.appendChild(img);
+    imageimage_container.innerHTML += `<figcaption>${name}</figcaption>`;
+    imageDisplay.appendChild(imageimage_container);
+  };
+};
+
+
+uploadButton.addEventListener("change", () => {
+  imageDisplay.innerHTML = "";
+  Array.from(uploadButton.files).forEach((file) => {
+    fileHandler(file, file.name, file.type);
+  });
+});
+
+image_container.addEventListener(
+  "dragenter",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    image_container.classList.add("active");
+  },
+  false
+);
+
+image_container.addEventListener(
+  "dragleave",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    image_container.classList.remove("active");
+  },
+  false
+);
+
+image_container.addEventListener(
+  "dragover",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    image_container.classList.add("active");
+  },
+  false
+);
+
+image_container.addEventListener(
+  "drop",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    image_container.classList.remove("active");
+    let draggedData = e.dataTransfer;
+    let files = draggedData.files;
+    imageDisplay.innerHTML = "";
+    Array.from(files).forEach((file) => {
+      fileHandler(file, file.name, file.type);
+    });
+  },
+  false
+);
+
+window.onload = () => {
+  error.innerText = "";
+};
+
+
+
+// let uploadVideo = document.getElementById("video_input_file");
+// let chosenVideeo = document.getElementById("chosen-image");
+// let videoFile = document.getElementById("file-name");
+// let video_Container = document.querySelector(".video_file");
+// let video_upload_error = document.getElementById("error");
+// let video_Display = document.getElementById("image-display");
+
+
+
+
+
+    
+
+const fileInput = document.getElementById('video_input_file');
+const videoContainer = document.getElementById('video_display');
+const videoPlayer = document.getElementById('video_img_ph');
+
+fileInput.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        const videoURL = URL.createObjectURL(file);
+        videoPlayer.src = videoURL;
+        videoContainer.style.display = 'block';
+    } else {
+        videoPlayer.src = '';
+        videoContainer.style.display = 'none';
+    }
+});
+
+videoPlayer.addEventListener('ended', function () {
+    
+});
+
+videoPlayer.addEventListener('error', function () {
+     
+});
+     
+ </script>
+</body>
+</html>

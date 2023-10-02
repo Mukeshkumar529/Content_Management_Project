@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(216,117,117,1) 17%, rgba(4,104,112,1) 83%);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+#navigation{
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(89, 10, 168);    
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+    margin-top: 1.2rem;
+    margin-left: 3rem;
+}
+
+.logo a{
+text-decoration: none;
+color: aliceblue;
+}
+
+.nav_contents{
+width: 80%;
+height: 100%;
+}
+
+.nav_contents ul{
+    display: flex;
+
+}
+
+.nav_contents ul li{
+    margin-left: 3rem;
+    list-style: none;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    color: aliceblue;
+}
+
+.nav_contents ul a{
+    text-decoration: none;
+}
+.nav_contents ul a li:hover{
+    color: lawngreen;
+}
+
+
+.nav_contents ul li a{
+    text-decoration: none;
+    color: rgb(50, 235, 50);
+}
+
+#blogs_post{
+    width: 100%;
+    height: auto;
+    margin-top:5rem;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 40rem;
+    border: 1px solid black;
+    margin-left: 8rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+}
+
+.post_desc{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid gold;
+    background-color: #000;
+}
+.profilr-img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: 1rem;
+    background-color: aquamarine;
+}
+
+.profilr-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.post_title{
+    margin-top: 1rem;
+    color: aliceblue;
+}
+
+.post_media_file{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 34rem;
+}
+
+
+.post_file{
+    width: 100%;
+    height: 80%;
+}
+.post_file img{
+    width: 100%;
+    height: 100%;
+}
+.post_file video{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+.post_reaction{
+    width: 100%;
+    height: 4.7rem;
+    background-color: rgb(99, 80, 99);
+    border-radius: 4px;
+}
+
+
+.post_reaction .icons {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.post_reaction .icons i{
+font-size: 18px;
+margin-left: 2rem;
+color: rgb(225, 121, 11);
+font-weight: 700;
+}
+.post_reaction .icons i:hover{
+    color: rgb(4, 84, 137);
+    cursor: pointer;
+}
+
+
+.main{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 20rem;
+}
+
+footer{
+    width: 100%;
+    height: 2rem;
+    background-color: gray;
+    color: aliceblue;
+    text-align: center;
+}

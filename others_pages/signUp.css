@@ -1,0 +1,106 @@
+body{
+    background-color: black;
+}
+
+#SignUpMain{
+    width: 40rem;
+    height: 42rem;
+    margin-left: 25rem;
+    margin-top: 8rem;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 12px;
+    background-color: rgb(3, 66, 45);
+}
+.title h1{
+    background-color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.detail{
+    width: 38rem;
+    height: 28rem;
+    margin-left: 1rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    background-color: rgb(7, 7, 8);
+}
+
+input{
+    margin: 1rem;
+    width: 30rem;
+    height: 2rem;
+    float: left 0.7rem;
+    border-radius: 4px;
+}
+ 
+
+.btn-SignUp{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 4px;
+    float: left 1rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: rgb(34, 136, 11);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+
+.btn-SignUp:hover{
+    background-color: coral;
+}
+
+.detail h1{
+    font-size: medium;
+}
+
+.btn-login{
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(130, 121, 104);
+    color: azure;
+    border-radius: 4px;
+}
+
+.btn-login a{
+    text-decoration: none;
+}
+.btn-login:hover{
+    background-color: green;
+}
+
+.signUp-icon{
+    margin: 1rem;
+    float: left 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.signUp-icon li{
+    list-style: none;
+    float: left;
+}
+
+.signUp-icon li a{
+    margin-left: 5rem;
+    color: azure;
+}
+
+.signUp-icon li a i{
+            margin: 0.5rem;   
+}
+
+.already-user{
+    margin-top: 3rem;
+    float: left;
+    margin-left: 14.5rem;
+}
+
+.input-icons{
+    color: coral;
+}
+ 
+
